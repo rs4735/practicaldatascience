@@ -20,7 +20,7 @@ dSalesPrice = {}
 sOption = str(sys.argv[1])
 
 #print sys.argv[1]
-print sOption
+#print sOption
 
 #loop through data by row
 for line in sys.stdin:
@@ -29,8 +29,8 @@ for line in sys.stdin:
     sSales.append(tempSales)    
     sPrice.append(tempPrice)
     
-print sSales
-print sPrice
+#print sSales
+#print sPrice
 
 if sOption == 'a':
     #single data column plot

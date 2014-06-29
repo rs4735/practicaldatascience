@@ -23,7 +23,7 @@ fAvgDB = 0.0
 fAvgProg = 0.0
 
 #run options 1,2a,2b,2c,3,4 corresponding to each subpart of the assignment
-sOption = '1'
+sOption = '4'
 
 #open file in read-only mode and load into file object
 fsurvey = open('/Users/richardsaito/Documents/Education/nyu/module 1/practical data science/data/survey_anon.txt', 'r')
@@ -43,30 +43,30 @@ cDatabase = Counter(lDatabase)
 cProgramming = Counter(lProgramming)
 
 # Separate out the counter to order it correctly when plotting.
-unix_list = [cUnix["I have written simple terminal commands or done some system work on the terminal"] * 4, #Unix
+unix_list = [cUnix["I dont even understand the question"], #Unix
             cUnix["I have issued a few commands in a terminal based on given instructions"] * 3,
             cUnix["I have no experience working in a terminal"] * 2,
-            cUnix["I dont even understand the question"]
+            cUnix["I have written simple terminal commands or done some system work on the terminal"] * 4
             ]
             
 db_list =   [cDatabase["I am a database hacker"] * 5, #DB
-            cDatabase["I can write very complex queries when needed"] * 4,
-            cDatabase["I can write simple queries and issue them to a database"] * 3,
+            cDatabase["I have never directly accessed a database"],
             cDatabase["I have issued simple queries to a relational database based on given instructions"] * 2,
-            cDatabase["I have never directly accessed a database"]
+            cDatabase["I can write simple queries and issue them to a database"] * 3,
+            cDatabase["I can write very complex queries when needed"] * 4
             ]
             
-prog_list = [cProgramming["I am a hacker or have  senior-level programming experience"] * 5, #prog
-            cProgramming["I can write complex programs, am familiar with programming design patterns, software testing, system design, and algorithms."] * 4,
-            cProgramming["I can write simple programs to accomplish tasks I encounter"] * 3,
+prog_list = [cProgramming["I have never programmed before."], #prog
+            cProgramming["I am a hacker or have  senior-level programming experience"] * 5,
             cProgramming["I have written simple programs, based on instructions or a tutorial"] * 2,
-            cProgramming["I have never programmed before."]
+            cProgramming["I can write simple programs to accomplish tasks I encounter"] * 3,
+            cProgramming["I can write complex programs, am familiar with programming design patterns, software testing, system design, and algorithms."] * 4
             ]
 
 #load chart labels
-tUnix = tuple(["UNnd", "UIns", "UFw", "UNo"])
-tDB = tuple(["DHck","DNvr","DSmp","DCmp","DIns"])
-tProg = tuple(["PHack","PIns","PCmp","PSmp","PNvr"])
+tUnix = tuple(["UX Don't", "UX Few", "UX No", "UX Smp"])
+tDB = tuple(["DB Hck","DB Nvr","DB Ins","DB WSmp","DB Cpx"])
+tProg = tuple(["PG Nvr","PG Hck","PG Ins","PG Smp","PG Cpx"])
 tSurvey = tuple(["UNo", "UFw", "UIns", "UNnd", "DIns", "DCmp", "DSmp", "DNvr", "DHck", "PNvr", "PSmp", "PCmp", "PIns", "PHck"])
 
 
